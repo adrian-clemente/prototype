@@ -8,10 +8,10 @@ dependencies {
     compile spec.product.pegasus.restliSpringBridge
     compile 'org.springframework:spring-context:4.0.4.RELEASE'
     compile 'org.springframework:spring-web:3.2.3.RELEASE'
-    //compile 'org.apache.shiro:shiro-core:1.2.3'
-    //compile 'org.apache.shiro:shiro-web:1.2.3'
-    //compile 'org.apache.shiro:shiro-spring:1.2.3'
-    //compile 'org.apache.shiro:shiro-aspectj:1.2.3'
+    compile 'org.apache.shiro:shiro-core:1.2.3'
+    compile 'org.apache.shiro:shiro-web:1.2.3'
+    compile 'org.apache.shiro:shiro-spring:1.2.3'
+    compile 'org.apache.shiro:shiro-aspectj:1.2.3'
 }
 
 

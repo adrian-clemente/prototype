@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: restli-spring-bridge-1.15.9">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/restli-spring-bridge/1.15.9/f5e3f61a67bd6164c663c8ebb425a2ef7b8b2e00/restli-spring-bridge-1.15.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/restli-spring-bridge/1.15.9/5c99467d00ad753c240fc913010a1814263e4afd/restli-spring-bridge-1.15.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
