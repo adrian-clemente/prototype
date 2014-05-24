@@ -1,0 +1,33 @@
+{
+  "models" : [ {
+    "type" : "record",
+    "name" : "User",
+    "namespace" : "com.prototype.user",
+    "doc" : "Generate a user",
+    "fields" : [ {
+      "name" : "username",
+      "type" : "string",
+      "doc" : "The user name"
+    } ]
+  } ],
+  "schema" : {
+    "schema" : "com.prototype.user.User",
+    "name" : "users",
+    "doc" : "Very simple Rest.li Resource that serves up a fortune cookie.\n\ngenerated from: com.prototype.user.impl.UsersResource",
+    "path" : "/users",
+    "collection" : {
+      "methods" : [ {
+        "method" : "get"
+      } ],
+      "entity" : {
+        "path" : "/users/{usersId}"
+      },
+      "supports" : [ "get" ],
+      "identifier" : {
+        "name" : "usersId",
+        "type" : "long"
+      }
+    },
+    "namespace" : "com.prototype.user"
+  }
+}

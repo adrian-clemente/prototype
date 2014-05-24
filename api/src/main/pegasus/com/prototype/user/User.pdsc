@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "name": "User",
+  "namespace": "com.prototype.user",
+  "doc": "Generate a user",
+  "fields": [
+    {"name": "username","type": "string","doc": "The user name"}
+  ]
+}

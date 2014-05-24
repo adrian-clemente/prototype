@@ -1,2 +1,5 @@
 rootProject.name = 'prototype'
+include 'api'
+include 'server'
+include 'client'
 

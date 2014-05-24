@@ -1,0 +1,20 @@
+{
+  "name" : "users",
+  "namespace" : "com.prototype.user",
+  "path" : "/users",
+  "schema" : "com.prototype.user.User",
+  "doc" : "Very simple Rest.li Resource that serves up a fortune cookie.\n\ngenerated from: com.prototype.user.impl.UsersResource",
+  "collection" : {
+    "identifier" : {
+      "name" : "usersId",
+      "type" : "long"
+    },
+    "supports" : [ "get" ],
+    "methods" : [ {
+      "method" : "get"
+    } ],
+    "entity" : {
+      "path" : "/users/{usersId}"
+    }
+  }
+}

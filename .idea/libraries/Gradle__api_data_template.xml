@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: api-data-template">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/api/build/libs/api-data-template.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

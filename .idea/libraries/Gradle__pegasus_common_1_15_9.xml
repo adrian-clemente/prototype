@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: pegasus-common-1.15.9">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/pegasus-common/1.15.9/b5e9493b2553d98c11e28df0b2f45b0532cded76/pegasus-common-1.15.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.linkedin.pegasus/pegasus-common/1.15.9/e54e84a113ff851b65761f35383e9c19f015d021/pegasus-common-1.15.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

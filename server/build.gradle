@@ -1,0 +1,31 @@
+apply plugin: 'war'
+apply plugin: 'pegasus'
+
+ext.apiProject = project(':api')
+dependencies {
+    compile project(path: ':api', configuration: 'dataTemplate')
+    compile spec.product.pegasus.restliServer
+    compile spec.product.pegasus.restliSpringBridge
+    compile 'org.springframework:spring-context:4.0.4.RELEASE'
+    compile 'org.springframework:spring-web:3.2.3.RELEASE'
+    //compile 'org.apache.shiro:shiro-core:1.2.3'
+    //compile 'org.apache.shiro:shiro-web:1.2.3'
+    //compile 'org.apache.shiro:shiro-spring:1.2.3'
+    //compile 'org.apache.shiro:shiro-aspectj:1.2.3'
+}
+
+
+// Below is only used for running jetty from within gradle for demo purposes.
+configurations {
+    jetty9
+}
+
+dependencies {
+    jetty9 "org.eclipse.jetty:jetty-runner:9.1.5.v20140505"
+}
+
+task JettyRunWar(type: JavaExec) {
+    main = "org.eclipse.jetty.runner.Runner"
+    args = [war.archivePath]
+    classpath configurations.jetty9
+}

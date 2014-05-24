@@ -1,12 +1,62 @@
 apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
 
-sourceCompatibility = 1.5
+sourceCompatibility = JavaVersion.VERSION_1_7
 version = '1.0'
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+
+    dependencies {
+        classpath group: 'com.linkedin.pegasus', name: 'gradle-plugins', version: '1.15.18'
+    }
+}
+
+pegasusVersion = "1.15.9"
+spec = [
+        "product" : [
+                "pegasus" : [
+                        "data" : "com.linkedin.pegasus:data:"+pegasusVersion,
+                        "generator" : "com.linkedin.pegasus:generator:"+pegasusVersion,
+                        "restliClient" : "com.linkedin.pegasus:restli-client:"+pegasusVersion,
+                        "restliServer" : "com.linkedin.pegasus:restli-server:"+pegasusVersion,
+                        "restliTools" : "com.linkedin.pegasus:restli-tools:"+pegasusVersion,
+                        "pegasusCommon" : "com.linkedin.pegasus:pegasus-common:"+pegasusVersion,
+                        "restliCommon" : "com.linkedin.pegasus:restli-common:"+pegasusVersion,
+                        "r2" : "com.linkedin.pegasus:r2:"+pegasusVersion,
+                        "restliSpringBridge" : "com.linkedin.pegasus:restli-spring-bridge:"+pegasusVersion
+                ]
+        ]
+]
+
+subprojects {
+    apply plugin: 'maven'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+
+    sourceCompatibility = JavaVersion.VERSION_1_7
+
+    afterEvaluate {
+        // add the standard pegasus dependencies wherever the plugin is used
+        if (project.plugins.hasPlugin('pegasus')) {
+            dependencies {
+                dataTemplateCompile spec.product.pegasus.data
+                restClientCompile spec.product.pegasus.restliClient
+            }
+        }
+    }
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
 }

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: server-test-data-template">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/server/build/libs/server-test-data-template.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
