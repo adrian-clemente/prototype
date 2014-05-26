@@ -16,8 +16,10 @@
   ~ specific language governing permissions and limitations
   ~ under the License.
   --%>
-<%@ include file="include.jsp" %>
-
+<%@ page import="org.apache.shiro.SecurityUtils" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <html>
     <head>
         <link type="text/css" rel="stylesheet" href="<c:url value="/style.css"/>"/>

@@ -64,6 +64,8 @@
                 # some example chain definitions:
                 /admin/** = authc, roles[admin]
                 /docs/** = authc, perms[document:read]
+                /login.jsp = authc
+                /home.jsp = authc
                 /** = anon
                 # more URL-to-FilterChain definitions here
             </value>
@@ -101,13 +103,20 @@
             </value>
         </property>
     </bean>
+    <!--FORMAT
+        <bean id="jdbcRealm" class="org.apache.shiro.realm.jdbc.JdbcRealm">
+            <property name="dataSource" ref="dataSource"/>
+            <property name="authenticationQuery" value="SELECT password FROM User WHERE nip = ?"/>
+            <property name="userRolesQuery" value="SELECT role FROM User WHERE nip = ?"/>
+            <property name="permissionsLookupEnabled" value="true" />
+            <property name="permissionsQuery" value="SELECT action FROM role_action WHERE role = ?"/>
+        </bean>
 
-    <bean id="jdbcRealm" class="org.apache.shiro.realm.jdbc.JdbcRealm">
-        <property name="dataSource" ref="dataSource"/>
-        <property name="authenticationQuery" value="SELECT password FROM User WHERE nip = ?"/>
-        <property name="userRolesQuery" value="SELECT role FROM User WHERE nip = ?"/>
-        <property name="permissionsLookupEnabled" value="true" />
-        <property name="permissionsQuery" value="SELECT action FROM role_action WHERE role = ?"/>
-    </bean>
-
-</beans>
+        <bean id="dataSource" class="com.mysql.jdbc.jdbc2.optional.MysqlDataSource">
+            <property name="serverName" value="localhost" />
+            <property name="user" value="root" />
+            <property name="password" value="" />
+            <property name="databaseName" value="prototype_schema" />
+        </bean>
+        -->
+    </beans>

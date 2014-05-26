@@ -29,7 +29,7 @@
     <!-- servlet mappings -->
     <servlet-mapping>
         <servlet-name>restliRequestHandler</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/api/*</url-pattern>
     </servlet-mapping>
 
 
